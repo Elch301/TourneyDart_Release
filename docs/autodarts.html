@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autodarts-PC einrichten – TourneyDart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><a href="index.html">Start</a> <a href="autodarts.html">Autodarts einrichten</a> <a href="datensicherheit.html">Datensicherheit</a> <a href="kontoloeschung.html">Konto löschen</a> <a href="agb.html">AGB und EULA</a> <a href="datenschutz.html">Datenschutz</a> <a href="impressum.html">Impressum</a></nav>
+<h1>Autodarts-PC einrichten</h1>
+<p>TourneyDart liest die Würfe von deinem Autodarts-Board über das Heimnetz. Auf dem Autodarts-PC (Mini-PC am Board) muss dafür nichts von TourneyDart installiert werden; die App liest nur die Meldungen von Autodarts.</p>
+<p class="note">Geprüft ist die Einrichtung mit Autodarts 2.0.2 auf Linux Mint. Menünamen können je nach System abweichen.</p>
+
+<h2>Was die App braucht</h2>
+<ul>
+<li>Autodarts läuft, das Board ist angemeldet und die Kameras sind zugeordnet (Autodarts Desktop).</li>
+<li>Der Autodarts-PC und das Gerät mit TourneyDart sind im <strong>selben Netzwerk</strong>.</li>
+<li>Die Schnittstelle von Autodarts ist auf <strong>Port 3180</strong> erreichbar (Voreinstellung).</li>
+</ul>
+
+<h2>1. Strom an – alles läuft</h2>
+<ul>
+<li><strong>Start bei Strom:</strong> im BIOS/UEFI „Restore on AC Power Loss“ bzw. „Power On after Power Failure“ auf <em>Power On</em> stellen.</li>
+<li><strong>Automatische Anmeldung</strong> für den Benutzer einrichten.</li>
+<li><strong>Kein Ruhezustand, keine Bildschirmsperre</strong> (Energieverwaltung).</li>
+<li><strong>Autodarts beim Anmelden starten:</strong> Autodarts Desktop in die Startprogramme eintragen und dort „Board automatisch starten“ einschalten, falls vorhanden.</li>
+</ul>
+
+<h2>2. Netzwerk</h2>
+<ul>
+<li><strong>Möglichst per Kabel (Ethernet).</strong> Board und Kameras senden laufend; ein schwaches WLAN kostet Meldungen.</li>
+<li><strong>Feste Adresse:</strong> im Router für den Autodarts-PC eine feste IP (DHCP-Reservierung) eintragen. Ändert sich die Adresse, findet die App das Board nicht mehr.</li>
+<li><strong>Kein Gäste-WLAN:</strong> dort sind Geräte oft voneinander abgeschottet (Client-Isolation). Auch ein aktives VPN kann stören.</li>
+<li>Eine Firewall muss Port 3180 im Heimnetz zulassen.</li>
+</ul>
+
+<h2>3. In TourneyDart verbinden</h2>
+<ol>
+<li>Einstellungen → Spielen → <strong>Autodarts-Profile</strong> → neues Profil. Die App sucht das Board im Netzwerk; ein Tipp auf den Treffer übernimmt die Adresse. Du kannst sie auch von Hand eintragen.</li>
+<li>Profil aktiv setzen und <strong>„Verbindung testen“</strong>: die App prüft nacheinander Adresse, Autodarts, Zustand des Boards und Live-Verbindung und sagt, was zu tun ist.</li>
+<li>Im Spiel zeigt die Statuszeile „Autodarts verbunden“. Autodarts ist dann die Standard-Eingabe; von Hand umschalten geht jederzeit.</li>
+</ol>
+
+<h2>Was die App tut – und was nicht</h2>
+<ul>
+<li>Autodarts liefert nur die Würfe. Gezählt wird in TourneyDart (Spielstand, Aufnahmen, Bust, Korrekturen). Änderungen in Autodarts werden nicht übernommen.</li>
+<li>Wird ein Dart verpasst (z. B. WLAN-Lücke), holt die App den Zustand des Boards nach.</li>
+<li>Mit „Takeout finished“ (Darts ziehen) endet die Aufnahme.</li>
+<li>Ändert sich die Adresse des Boards, sucht die App es von selbst im Netzwerk.</li>
+</ul>
+
+<h2>Optional: Kamerabild</h2>
+<p>Das Kamerabild wird im Heimnetz-Stream gezeigt. Dafür muss auf dem Autodarts-PC ein Kamera-Dienst laufen (z. B. MediaMTX); die Adresse (z. B. <code>http://&lt;ip&gt;:8889/&lt;kamera&gt;</code>) trägst du im Autodarts-Profil unter „Kamerabild“ ein. Das Kamerabild in der App ist noch nicht an einem echten Board getestet.</p>
+
+<h2>Wenn etwas nicht klappt</h2>
+<table>
+<tr><th>Symptom</th><th>Prüfen</th></tr>
+<tr><td>Board wird nicht gefunden</td><td>Gleiches Netzwerk? Kein Gäste-WLAN? Port 3180 frei? Adresse von Hand eintragen.</td></tr>
+<tr><td>„Autodarts erkannt“ schlägt fehl</td><td>Falscher Port oder falsches Gerät.</td></tr>
+<tr><td>„Board nicht verbunden“</td><td>In Autodarts Desktop Board und Kameras prüfen.</td></tr>
+<tr><td>Würfe fehlen</td><td>Netz stabil? Möglichst Kabel statt WLAN.</td></tr>
+</table>
+<p>Prüfung am PC im Netz: <code>http://&lt;ip&gt;:3180/api/version</code> im Browser öffnen – es erscheint die Autodarts-Version.</p>
+</body>
+</html>

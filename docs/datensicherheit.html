@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Datensicherheit – TourneyDart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav><a href="index.html">Start</a> <a href="autodarts.html">Autodarts einrichten</a> <a href="datensicherheit.html">Datensicherheit</a> <a href="kontoloeschung.html">Konto löschen</a> <a href="agb.html">AGB und EULA</a> <a href="datenschutz.html">Datenschutz</a> <a href="impressum.html">Impressum</a></nav>
+<h1>Datensicherheit</h1>
+<p>Kurz zusammengefasst, welche Daten die App verarbeitet und wie sie geschützt sind. Die vollständigen Angaben stehen in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+<h2>Welche Daten, wo</h2>
+<table>
+<tr><th>Daten</th><th>Wo</th></tr>
+<tr><td>Spielstände, Würfe, Spieler, Turniere, Statistiken, Einstellungen, Bilder, mp3-Dateien</td><td>auf deinem Gerät. Ohne Online-Funktion verlässt nichts das Gerät.</td></tr>
+<tr><td>Anmeldung (Google oder Microsoft)</td><td>Wir erhalten eine Konto-Kennung und die bestätigte E-Mail-Adresse. Passwörter erhalten wir nie.</td></tr>
+<tr><td>Spieler-, Spiel- und Turnierdaten, Gruppen, Freunde (nur mit Modul Abgleich)</td><td>Server bei Supabase; sichtbar nur für Gruppenmitglieder, Freunde und Mitspieler des Spiels. Realnamen werden nicht verlangt.</td></tr>
+<tr><td>Bilder und Töne im Cloudshare (nur mit Modul)</td><td>höchstens 30 Tage auf dem Server.</td></tr>
+<tr><td>Autodarts und Kamerabild</td><td>nur im Heimnetz, nichts geht an uns.</td></tr>
+<tr><td>Fehlerberichte</td><td>nur wenn du sie einschaltest (Standard: aus); technische Angaben, keine Spiel- oder Spielerdaten.</td></tr>
+</table>
+<h2>Schutz</h2>
+<ul>
+<li>Die Verbindung zum Server ist verschlüsselt (HTTPS/TLS).</li>
+<li>Zugriffe auf Server-Daten sind je Gruppe beschränkt (Row Level Security); andere Nutzer sehen weder deine E-Mail-Adresse noch deine Konto-Kennung.</li>
+<li>Die Autodarts-Profile (Zugangsdaten zum Board) werden auf dem Gerät verschlüsselt gespeichert.</li>
+<li>Einladungs-Links werden auf dem Server nur als Prüfwert gespeichert.</li>
+<li>Gäste bleiben immer auf dem Gerät und werden nie hochgeladen.</li>
+</ul>
+<h2>Weitergabe</h2>
+<p>Wir verkaufen keine Daten und nutzen keine Werbung oder Werbe-Kennungen. Dienstleister: Supabase (Server), Google und Microsoft (Anmeldung), GitHub (Download und Update-Hinweis unter Windows), Google Play (Android), Sentry (Fehlerberichte, nur auf Wunsch).</p>
+<h2>Löschen</h2>
+<p>Siehe <a href="kontoloeschung.html">Konto löschen</a>.</p>
+</body>
+</html>

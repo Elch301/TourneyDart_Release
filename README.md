@@ -1,32 +1,46 @@
 # TourneyDart – Downloads
 
 Dies ist das öffentliche Archiv der fertigen Programme von **TourneyDart**
-(Dart zählen, Turniere, Statistiken, Livestream). Hier liegt **kein Quellcode**,
-nur die Installationsdateien. Jede Version ist ein *Release*.
+(Dart zählen, Turniere, Statistiken, Livestream) von MaKaDo Software. Hier liegt
+**kein Quellcode**, nur die Installationsdateien. Jede Version ist ein *Release*.
 
 ## Installation
 
 **Windows:** `TourneyDart-Setup-<Version>.exe` herunterladen und ausführen.
 Windows zeigt beim ersten Start evtl. eine SmartScreen-Meldung (*Weitere
-Informationen → Trotzdem ausführen*).
+Informationen → Trotzdem ausführen*). Die Prüfsummen stehen in `SHA256SUMS.txt`
+des jeweiligen Releases.
 
-**Android:** `TourneyDart-<Version>.apk` herunterladen und öffnen. Dafür muss
-die Installation aus dieser Quelle erlaubt werden.
+**Android:** über Google Play.
 
-Die Prüfsummen stehen in `SHA256SUMS.txt` des jeweiligen Releases.
+## Konto und Lizenz
 
-## Lizenz
+Die App braucht ein Konto (Google oder Microsoft). Die Kernfunktionen sind
+kostenlos. Zusatzfunktionen (Abgleich, Cloudshare, Livestream, Rangliste)
+brauchen einen Lizenzcode. Die App ist derzeit **kostenlos**, es wird nichts
+verkauft. Die Codes stellt der Anbieter auf Anfrage unentgeltlich aus
+(E-Mail an makado.software@gmail.com mit der Konto-ID aus Einstellungen → Lizenz).
+Ein Code gilt für das Konto und lässt sich auf mehreren Geräten nutzen.
 
-Die App braucht ein Konto (Google oder Microsoft). Zusatzfunktionen (Abgleich,
-Livestream, Rangliste, Cloudshare) brauchen einen Lizenzcode; die Kernfunktionen
-laufen ohne.
+## Hilfe und Rechtliches
+
+Die Seiten liegen im Ordner [`docs`](docs/) und sind über GitHub Pages
+erreichbar:
+
+- Start: `docs/index.html`
+- Autodarts-PC einrichten: `docs/autodarts.html`
+- Datensicherheit: `docs/datensicherheit.html`
+- Konto löschen: `docs/kontoloeschung.html`
+- AGB und EULA, Datenschutz, Impressum: `docs/agb.html`,
+  `docs/datenschutz.html`, `docs/impressum.html`
 
 ## Aktualisieren
 
-Die App weist beim Start auf eine neuere Version hin und öffnet diese Seite. Das
-Setup aktualisiert eine vorhandene Installation, die Daten bleiben erhalten.
+Windows: Die App weist beim Start auf eine neuere Version hin und öffnet die
+Release-Seite; das Setup aktualisiert eine vorhandene Installation, die Daten
+bleiben erhalten. Android: Updates kommen über Google Play.
 
 ---
 
-Die Releases werden automatisch aus dem privaten Entwicklungs-Repo erstellt;
-**in diesem Repo bitte nichts von Hand ändern**.
+Die Releases und die Seiten werden automatisch aus dem privaten Entwicklungs-Repo
+erstellt; **in diesem Repo bitte nichts von Hand ändern**.
